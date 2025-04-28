@@ -1,0 +1,68 @@
+2025-04-27 20:50:08,002 - Attempting to route payment to CHASUS33XXX
+2025-04-27 20:50:08,002 - Routing payment to CHASUS33XXX for 231.0
+2025-04-27 20:50:08,002 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 231.0
+2025-04-27 20:50:08,008 - Settlement status: Settlement Success
+2025-04-27 20:50:10,235 - Attempting to route payment to CHASUS33XXX
+2025-04-27 20:50:10,235 - Routing payment to CHASUS33XXX for 231.0
+2025-04-27 20:50:10,235 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 231.0
+2025-04-27 20:50:10,242 - Settlement status: Settlement Success
+2025-04-27 20:55:00,955 - Attempting to route payment to CHASUS33XXX
+2025-04-27 20:55:00,955 - Routing payment to CHASUS33XXX for 343.0
+2025-04-27 20:55:00,955 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 343.0
+2025-04-27 20:55:00,963 - Settlement status: Settlement Success
+2025-04-27 20:56:28,911 - Attempting to route payment to CITIUS33XXX
+2025-04-27 20:56:28,911 - Routing payment to CITIUS33XXX for 300.0
+2025-04-27 20:56:28,911 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 300.0
+2025-04-27 20:56:28,922 - Settlement status: Settlement Success
+2025-04-27 20:58:14,523 - Attempting to route payment to CHASUS33XXX
+2025-04-27 20:58:14,523 - Routing payment to CHASUS33XXX for 123.0
+2025-04-27 20:58:14,523 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 123.0
+2025-04-27 20:58:14,531 - Settlement status: Settlement Success
+2025-04-27 20:58:59,001 - Attempting to route payment to BOFCUS3NXXX
+2025-04-27 20:58:59,001 - Routing payment to BOFCUS3NXXX for 33.0
+2025-04-27 20:58:59,001 - Settling payment from CHASUS33XXX to BOFCUS3NXXX of amount 33.0
+2025-04-27 20:58:59,009 - Settlement status: Settlement Success
+2025-04-27 21:00:22,395 - Attempting to route payment to BOFCUS3NXXX
+2025-04-27 21:00:22,396 - Routing payment to BOFCUS3NXXX for 111.0
+2025-04-27 21:00:22,396 - Settling payment from CHASUS33XXX to BOFCUS3NXXX of amount 111.0
+2025-04-27 21:00:22,403 - Settlement status: Settlement Success
+2025-04-27 21:03:01,702 - Attempting to route payment to CHASUS33XXX
+2025-04-27 21:03:01,702 - Routing payment to CHASUS33XXX for 200.0
+2025-04-27 21:03:01,702 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
+2025-04-27 21:03:01,708 - Settlement status: Settlement Success
+2025-04-27 21:03:09,693 - Attempting to route payment to CHASUS33XXX
+2025-04-27 21:03:09,693 - Routing payment to CHASUS33XXX for 200.0
+2025-04-27 21:03:09,693 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
+2025-04-27 21:03:09,704 - Settlement status: Settlement Success
+2025-04-27 21:04:41,824 - Attempting to route payment to CITIUS33XXX
+2025-04-27 21:04:41,824 - Routing payment to CITIUS33XXX for 200.0
+2025-04-27 21:04:41,824 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 200.0
+2025-04-27 21:04:41,824 - Settlement error: near "FOR": syntax error
+2025-04-27 21:04:41,824 - Settlement status: Settlement Failed: near "FOR": syntax error
+2025-04-27 21:04:47,623 - Attempting to route payment to CITIUS33XXX
+2025-04-27 21:04:47,623 - Routing payment to CITIUS33XXX for 200.0
+2025-04-27 21:04:47,624 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 200.0
+2025-04-27 21:04:47,624 - Settlement error: near "FOR": syntax error
+2025-04-27 21:04:47,624 - Settlement status: Settlement Failed: near "FOR": syntax error
+2025-04-27 21:04:51,742 - Attempting to route payment to CITIUS33XXX
+2025-04-27 21:04:51,742 - Routing payment to CITIUS33XXX for 200.0
+2025-04-27 21:04:51,742 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 200.0
+2025-04-27 21:04:51,742 - Settlement error: near "FOR": syntax error
+2025-04-27 21:04:51,742 - Settlement status: Settlement Failed: near "FOR": syntax error
+2025-04-27 21:04:59,246 - Attempting to route payment to CITIUS33XXX
+2025-04-27 21:04:59,246 - Routing payment to CITIUS33XXX for 200.0
+2025-04-27 21:04:59,246 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 200.0
+2025-04-27 21:04:59,246 - Settlement error: near "FOR": syntax error
+2025-04-27 21:04:59,246 - Settlement status: Settlement Failed: near "FOR": syntax error
+2025-04-27 21:06:14,483 - Attempting to route payment to CHASUS33XXX
+2025-04-27 21:06:14,483 - Routing payment to CHASUS33XXX for 200.0
+2025-04-27 21:06:14,483 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
+2025-04-27 21:06:14,493 - Settlement status: Settlement Success
+2025-04-27 21:07:07,819 - Attempting to route payment to CHASUS33XXX
+2025-04-27 21:07:07,819 - Routing payment to CHASUS33XXX for 200.0
+2025-04-27 21:07:07,819 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
+2025-04-27 21:07:07,826 - Settlement status: Settlement Success
+2025-04-27 21:07:38,804 - Attempting to route payment to CHASUS33XXX
+2025-04-27 21:07:38,805 - Routing payment to CHASUS33XXX for 200.0
+2025-04-27 21:07:38,805 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
+2025-04-27 21:07:38,813 - Settlement status: Settlement Success
