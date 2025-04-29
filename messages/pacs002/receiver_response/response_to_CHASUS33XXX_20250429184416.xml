@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<Document>
+  <FIToFIPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PACS002-2025-04-29-224416</MsgId>
+      <CreDtTm>2025-04-29T22:44:16</CreDtTm>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>FWD-20250429184416</OrgnlMsgId>
+      <OrgnlMsgNmId>pacs.008.001.01</OrgnlMsgNmId>
+      <GrpSts>ACCP</GrpSts>
+      <StsRsn>
+        <Rsn>Payment accepted by receiver</Rsn>
+      </StsRsn>
+    </OrgnlGrpInfAndSts>
+  </FIToFIPmtStsRpt>
+</Document>

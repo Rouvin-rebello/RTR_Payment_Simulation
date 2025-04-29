@@ -4,6 +4,10 @@ from datetime import datetime, timezone
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from RTR_Exchange_Processor import RTRExchangeProcessor
+import logging
+
+# Configure logging
+logging.basicConfig(filename='settlement_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # === Database Connection Management ===
 def get_db_connection():
@@ -34,6 +38,7 @@ def get_user_by_name(name):
 
 # === ISO 20022 Message Generator ===
 def generate_iso20022_message(payer, payee, amount):
+    logging.info(f"Generating PACS.008 message for payment from {payer['name']} to {payee['name']} for amount {amount}")
     now = datetime.now(timezone.utc)
     timestamp = now.strftime("%Y-%m-%d-%H%M%S")
     
@@ -62,10 +67,11 @@ def generate_iso20022_message(payer, payee, amount):
     return ET.ElementTree(document)
 
 def save_message(tree, payer_name, payee_name):
+    logging.info(f"Saving PACS.008 message for payment from {payer_name} to {payee_name}")
     if not os.path.exists("messages"):
         os.makedirs("messages")
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
-    filename = f"messages/{payer_name.replace(' ', '_')}_to_{payee_name.replace(' ', '_')}_{timestamp}.xml"
+    filename = f"messages/pacs008/{payer_name.replace(' ', '_')}_to_{payee_name.replace(' ', '_')}_{timestamp}.xml"
     
     # Convert ElementTree to string
     rough_string = ET.tostring(tree.getroot(), 'utf-8')
@@ -77,6 +83,7 @@ def save_message(tree, payer_name, payee_name):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(pretty_xml)
     
+    logging.info(f"PACS.008 message saved to {filename}")
     return filename
 
 def process_through_rtr(filename):

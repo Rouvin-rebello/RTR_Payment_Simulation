@@ -1,6 +1,7 @@
 import tkinter.messagebox as messagebox
 import customtkinter as ctk
 import sqlite3
+import logging
 from ISO20022_Pacs008_Generator import (
     get_all_users,
     get_user_by_name,
@@ -8,7 +9,12 @@ from ISO20022_Pacs008_Generator import (
     save_message,
     process_through_rtr
 )
+from ISO20022_Pain001_Generator import generate_pain001_message, save_pain001_message
 from db_manager import reset_db
+from Agent_Debtor_Simulator import FISimulator
+
+# Configure logging
+logging.basicConfig(filename='settlement_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # === Setup customtkinter ===
 ctk.set_appearance_mode("System") 
@@ -207,45 +213,61 @@ class PaymentApp(ctk.CTk):
             messagebox.showerror("Error", "Insufficient funds")
             return
 
-        # Process payment
         try:
+            logging.info(f"Initiating payment from {payer_name} to {payee_name} for amount {amount}")
             conn = sqlite3.connect('payment_system.db')
             cursor = conn.cursor()
-            
-            # Only log transaction
-            cursor.execute("""
-                INSERT INTO transactions (sender_id, receiver_id, amount)
-                SELECT s.id, r.id, ?
-                FROM users s, users r
-                WHERE s.name = ? AND r.name = ?
-            """, (amount, payer_name, payee_name))
-            
-            conn.commit()
 
-            # Generate and save ISO20022 message
-            tree = generate_iso20022_message(payer, payee, amount)
-            filename = save_message(tree, payer_name, payee_name)
+            # Generate PAIN.001 message
+            logging.info(f"Generating PAIN.001 message for customer payment initiation")
+            pain001_tree = generate_pain001_message(payer, payee, amount)
+            pain001_filename = save_pain001_message(pain001_tree, payer_name)
+            logging.info(f"PAIN.001 message saved to {pain001_filename}")
+            
+            # Process through FI Simulator
+            logging.info(f"Sending PAIN.001 message to FI Simulator")
+            fi_simulator = FISimulator()
+            success, result = fi_simulator.process_pain001(pain001_filename)
+            
+            if not success:
+                logging.error(f"FI Processing Error: {result}")
+                messagebox.showerror("FI Processing Error", result)
+                return
+                
+            pacs008_filename = result
 
-            # Process through RTR Exchange (this will handle the actual balance updates)
-            rtr_result = process_through_rtr(filename)
+            # Process through RTR Exchange
+            rtr_result = process_through_rtr(pacs008_filename)
             
             if "Success" in rtr_result:
+                # Log the transaction
+                cursor.execute("""
+                    INSERT INTO transactions (sender_id, receiver_id, amount)
+                    SELECT s.id, r.id, ?
+                    FROM users s, users r
+                    WHERE s.name = ? AND r.name = ?
+                """, (amount, payer_name, payee_name))
+                
+                conn.commit()
                 conn.close()
-                # First refresh the payment screen
+                
+                # Refresh the payment screen
                 self.payment_frame.destroy()
                 self.create_payment_screen()
-                # Then show the success message
                 messagebox.showinfo("Success", f"Payment processed successfully\nAmount: ${amount:.2f}\nTo: {payee_name}")
             else:
-                # Rollback on RTR failure
                 conn.rollback()
                 conn.close()
                 messagebox.showerror("RTR Processing Failed", f"Payment failed: {rtr_result}")
 
-        except sqlite3.Error as e:
-            messagebox.showerror("Database Error", f"Transaction failed: {str(e)}")
-            conn.rollback()
-            conn.close()
+        except Exception as e:
+            logging.error(f"Transaction failed: {str(e)}")
+            messagebox.showerror("Error", f"Transaction failed: {str(e)}")
+            try:
+                conn.rollback()
+                conn.close()
+            except:
+                pass
 
 if __name__ == "__main__":
     app = PaymentApp()

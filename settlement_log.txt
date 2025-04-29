@@ -1,68 +1,85 @@
-2025-04-27 20:50:08,002 - Attempting to route payment to CHASUS33XXX
-2025-04-27 20:50:08,002 - Routing payment to CHASUS33XXX for 231.0
-2025-04-27 20:50:08,002 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 231.0
-2025-04-27 20:50:08,008 - Settlement status: Settlement Success
-2025-04-27 20:50:10,235 - Attempting to route payment to CHASUS33XXX
-2025-04-27 20:50:10,235 - Routing payment to CHASUS33XXX for 231.0
-2025-04-27 20:50:10,235 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 231.0
-2025-04-27 20:50:10,242 - Settlement status: Settlement Success
-2025-04-27 20:55:00,955 - Attempting to route payment to CHASUS33XXX
-2025-04-27 20:55:00,955 - Routing payment to CHASUS33XXX for 343.0
-2025-04-27 20:55:00,955 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 343.0
-2025-04-27 20:55:00,963 - Settlement status: Settlement Success
-2025-04-27 20:56:28,911 - Attempting to route payment to CITIUS33XXX
-2025-04-27 20:56:28,911 - Routing payment to CITIUS33XXX for 300.0
-2025-04-27 20:56:28,911 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 300.0
-2025-04-27 20:56:28,922 - Settlement status: Settlement Success
-2025-04-27 20:58:14,523 - Attempting to route payment to CHASUS33XXX
-2025-04-27 20:58:14,523 - Routing payment to CHASUS33XXX for 123.0
-2025-04-27 20:58:14,523 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 123.0
-2025-04-27 20:58:14,531 - Settlement status: Settlement Success
-2025-04-27 20:58:59,001 - Attempting to route payment to BOFCUS3NXXX
-2025-04-27 20:58:59,001 - Routing payment to BOFCUS3NXXX for 33.0
-2025-04-27 20:58:59,001 - Settling payment from CHASUS33XXX to BOFCUS3NXXX of amount 33.0
-2025-04-27 20:58:59,009 - Settlement status: Settlement Success
-2025-04-27 21:00:22,395 - Attempting to route payment to BOFCUS3NXXX
-2025-04-27 21:00:22,396 - Routing payment to BOFCUS3NXXX for 111.0
-2025-04-27 21:00:22,396 - Settling payment from CHASUS33XXX to BOFCUS3NXXX of amount 111.0
-2025-04-27 21:00:22,403 - Settlement status: Settlement Success
-2025-04-27 21:03:01,702 - Attempting to route payment to CHASUS33XXX
-2025-04-27 21:03:01,702 - Routing payment to CHASUS33XXX for 200.0
-2025-04-27 21:03:01,702 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
-2025-04-27 21:03:01,708 - Settlement status: Settlement Success
-2025-04-27 21:03:09,693 - Attempting to route payment to CHASUS33XXX
-2025-04-27 21:03:09,693 - Routing payment to CHASUS33XXX for 200.0
-2025-04-27 21:03:09,693 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
-2025-04-27 21:03:09,704 - Settlement status: Settlement Success
-2025-04-27 21:04:41,824 - Attempting to route payment to CITIUS33XXX
-2025-04-27 21:04:41,824 - Routing payment to CITIUS33XXX for 200.0
-2025-04-27 21:04:41,824 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 200.0
-2025-04-27 21:04:41,824 - Settlement error: near "FOR": syntax error
-2025-04-27 21:04:41,824 - Settlement status: Settlement Failed: near "FOR": syntax error
-2025-04-27 21:04:47,623 - Attempting to route payment to CITIUS33XXX
-2025-04-27 21:04:47,623 - Routing payment to CITIUS33XXX for 200.0
-2025-04-27 21:04:47,624 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 200.0
-2025-04-27 21:04:47,624 - Settlement error: near "FOR": syntax error
-2025-04-27 21:04:47,624 - Settlement status: Settlement Failed: near "FOR": syntax error
-2025-04-27 21:04:51,742 - Attempting to route payment to CITIUS33XXX
-2025-04-27 21:04:51,742 - Routing payment to CITIUS33XXX for 200.0
-2025-04-27 21:04:51,742 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 200.0
-2025-04-27 21:04:51,742 - Settlement error: near "FOR": syntax error
-2025-04-27 21:04:51,742 - Settlement status: Settlement Failed: near "FOR": syntax error
-2025-04-27 21:04:59,246 - Attempting to route payment to CITIUS33XXX
-2025-04-27 21:04:59,246 - Routing payment to CITIUS33XXX for 200.0
-2025-04-27 21:04:59,246 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 200.0
-2025-04-27 21:04:59,246 - Settlement error: near "FOR": syntax error
-2025-04-27 21:04:59,246 - Settlement status: Settlement Failed: near "FOR": syntax error
-2025-04-27 21:06:14,483 - Attempting to route payment to CHASUS33XXX
-2025-04-27 21:06:14,483 - Routing payment to CHASUS33XXX for 200.0
-2025-04-27 21:06:14,483 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
-2025-04-27 21:06:14,493 - Settlement status: Settlement Success
-2025-04-27 21:07:07,819 - Attempting to route payment to CHASUS33XXX
-2025-04-27 21:07:07,819 - Routing payment to CHASUS33XXX for 200.0
-2025-04-27 21:07:07,819 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
-2025-04-27 21:07:07,826 - Settlement status: Settlement Success
-2025-04-27 21:07:38,804 - Attempting to route payment to CHASUS33XXX
-2025-04-27 21:07:38,805 - Routing payment to CHASUS33XXX for 200.0
-2025-04-27 21:07:38,805 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
-2025-04-27 21:07:38,813 - Settlement status: Settlement Success
+2025-04-29 18:40:09,063 - Initiating payment from ABC Corporation to Potato Inc. for amount 200.0
+2025-04-29 18:40:09,064 - Generating PAIN.001 message for customer payment initiation
+2025-04-29 18:40:09,064 - Creating PAIN.001 message structure for ABC Corporation to Potato Inc.
+2025-04-29 18:40:09,064 - PAIN.001 message structure created with ID: PAIN001-2025-04-29-224009
+2025-04-29 18:40:09,064 - Saving PAIN.001 message for ABC Corporation
+2025-04-29 18:40:09,072 - PAIN.001 message successfully saved to messages/pain001/pain001_ABC_Corporation_20250429224009.xml
+2025-04-29 18:40:09,072 - PAIN.001 message saved to messages/pain001/pain001_ABC_Corporation_20250429224009.xml
+2025-04-29 18:40:09,072 - Sending PAIN.001 message to FI Simulator
+2025-04-29 18:40:09,072 - Generating PACS.008 message for payment from ABC Corporation to Potato Inc. for amount 200.0
+2025-04-29 18:40:09,072 - Saving PACS.008 message for payment from ABC Corporation to Potato Inc.
+2025-04-29 18:40:09,073 - PACS.008 message saved to messages/pacs008/ABC_Corporation_to_Potato_Inc._20250429224009.xml
+2025-04-29 18:40:09,073 - Processing payment message from file: messages/pacs008/ABC_Corporation_to_Potato_Inc._20250429224009.xml
+2025-04-29 18:40:09,074 - Message validation successful for payment of 200.0 from BOFCUS3NXXX to CHASUS33XXX
+2025-04-29 18:40:09,074 - Generating PACS.002 acknowledgment for message 2025-04-29-224009
+2025-04-29 18:40:09,075 - PACS.002 response message saved to messages/pacs002/response/pacs002_BOFCUS3NXXX_20250429184009.xml
+2025-04-29 18:40:09,075 - Generated PACS.002 acknowledgment for BOFCUS3NXXX
+2025-04-29 18:40:09,075 - Forwarding PACS.008 message to receiving bank: CHASUS33XXX
+2025-04-29 18:40:09,076 - Forwarded PACS.008 saved to messages/pacs008/forwarded/to_CHASUS33XXX_20250429184009.xml
+2025-04-29 18:40:09,076 - PACS.008 message forwarded to receiving bank CHASUS33XXX
+2025-04-29 18:40:09,076 - Receiver Bank processing incoming PACS.008: messages/pacs008/forwarded/to_CHASUS33XXX_20250429184009.xml
+2025-04-29 18:40:09,076 - Generating PACS.002 acknowledgment for message FWD-20250429184009
+2025-04-29 18:40:09,077 - Receiver PACS.002 response saved to messages/pacs002/receiver_response/response_to_BOFCUS3NXXX_20250429184009.xml
+2025-04-29 18:40:09,077 - Receiver Bank sent PACS.002 acceptance for message FWD-20250429184009
+2025-04-29 18:40:09,077 - Received acceptance PACS.002 from receiver bank
+2025-04-29 18:40:09,077 - Validating routing for payment of 200.0 from BOFCUS3NXXX to CHASUS33XXX
+2025-04-29 18:40:09,077 - Attempting to route payment to CHASUS33XXX
+2025-04-29 18:40:09,077 - Routing payment to CHASUS33XXX for 200.0
+2025-04-29 18:40:09,077 - Initiating settlement for payment of 200.0 from BOFCUS3NXXX to CHASUS33XXX
+2025-04-29 18:40:09,077 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 200.0
+2025-04-29 18:40:09,078 - Starting settlement process for 200.0 from BOFCUS3NXXX to CHASUS33XXX
+2025-04-29 18:40:09,078 - Updating balance for user 1 by -200.0
+2025-04-29 18:40:09,083 - Updating balance for user 2 by 200.0
+2025-04-29 18:40:09,083 - Recording payment of 200.0 from user 1 to user 2
+2025-04-29 18:40:09,092 - Successfully settled payment of 200.0 from BOFCUS3NXXX to CHASUS33XXX
+2025-04-29 18:40:09,092 - Settlement status: Settlement Success
+2025-04-29 18:40:09,092 - Sending settlement completion notifications to BOFCUS3NXXX and CHASUS33XXX
+2025-04-29 18:40:09,092 - Generating PACS.002 acknowledgment for message 2025-04-29-224009
+2025-04-29 18:40:09,093 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_BOFCUS3NXXX_20250429184009.xml
+2025-04-29 18:40:09,093 - Generating PACS.002 acknowledgment for message 2025-04-29-224009
+2025-04-29 18:40:09,094 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_CHASUS33XXX_20250429184009.xml
+2025-04-29 18:40:09,094 - Settlement notifications sent to both parties
+2025-04-29 18:44:16,416 - Initiating payment from Potato Inc. to ABC Corporation for amount 1000.0
+2025-04-29 18:44:16,416 - Generating PAIN.001 message for customer payment initiation
+2025-04-29 18:44:16,416 - Creating PAIN.001 message structure for Potato Inc. to ABC Corporation
+2025-04-29 18:44:16,417 - PAIN.001 message structure created with ID: PAIN001-2025-04-29-224416
+2025-04-29 18:44:16,417 - Saving PAIN.001 message for Potato Inc.
+2025-04-29 18:44:16,425 - PAIN.001 message successfully saved to messages/pain001/pain001_Potato_Inc._20250429224416.xml
+2025-04-29 18:44:16,425 - PAIN.001 message saved to messages/pain001/pain001_Potato_Inc._20250429224416.xml
+2025-04-29 18:44:16,425 - Sending PAIN.001 message to FI Simulator
+2025-04-29 18:44:16,426 - Generating PACS.008 message for payment from Potato Inc. to ABC Corporation for amount 1000.0
+2025-04-29 18:44:16,426 - Saving PACS.008 message for payment from Potato Inc. to ABC Corporation
+2025-04-29 18:44:16,426 - PACS.008 message saved to messages/pacs008/Potato_Inc._to_ABC_Corporation_20250429224416.xml
+2025-04-29 18:44:16,427 - Processing payment message from file: messages/pacs008/Potato_Inc._to_ABC_Corporation_20250429224416.xml
+2025-04-29 18:44:16,427 - Message validation successful for payment of 1000.0 from CHASUS33XXX to BOFCUS3NXXX
+2025-04-29 18:44:16,427 - Generating PACS.002 acknowledgment for message 2025-04-29-224416
+2025-04-29 18:44:16,428 - PACS.002 response message saved to messages/pacs002/response/pacs002_CHASUS33XXX_20250429184416.xml
+2025-04-29 18:44:16,428 - Generated PACS.002 acknowledgment for CHASUS33XXX
+2025-04-29 18:44:16,428 - Forwarding PACS.008 message to receiving bank: BOFCUS3NXXX
+2025-04-29 18:44:16,430 - Forwarded PACS.008 saved to messages/pacs008/forwarded/to_BOFCUS3NXXX_20250429184416.xml
+2025-04-29 18:44:16,430 - PACS.008 message forwarded to receiving bank BOFCUS3NXXX
+2025-04-29 18:44:16,430 - Receiver Bank processing incoming PACS.008: messages/pacs008/forwarded/to_BOFCUS3NXXX_20250429184416.xml
+2025-04-29 18:44:16,430 - Generating PACS.002 acknowledgment for message FWD-20250429184416
+2025-04-29 18:44:16,431 - Receiver PACS.002 response saved to messages/pacs002/receiver_response/response_to_CHASUS33XXX_20250429184416.xml
+2025-04-29 18:44:16,431 - Receiver Bank sent PACS.002 acceptance for message FWD-20250429184416
+2025-04-29 18:44:16,431 - Received acceptance PACS.002 from receiver bank
+2025-04-29 18:44:16,431 - Validating routing for payment of 1000.0 from CHASUS33XXX to BOFCUS3NXXX
+2025-04-29 18:44:16,431 - Attempting to route payment to BOFCUS3NXXX
+2025-04-29 18:44:16,431 - Routing payment to BOFCUS3NXXX for 1000.0
+2025-04-29 18:44:16,431 - Initiating settlement for payment of 1000.0 from CHASUS33XXX to BOFCUS3NXXX
+2025-04-29 18:44:16,431 - Settling payment from CHASUS33XXX to BOFCUS3NXXX of amount 1000.0
+2025-04-29 18:44:16,431 - Starting settlement process for 1000.0 from CHASUS33XXX to BOFCUS3NXXX
+2025-04-29 18:44:16,432 - Updating balance for user 2 by -1000.0
+2025-04-29 18:44:16,433 - Updating balance for user 1 by 1000.0
+2025-04-29 18:44:16,433 - Recording payment of 1000.0 from user 2 to user 1
+2025-04-29 18:44:16,439 - Successfully settled payment of 1000.0 from CHASUS33XXX to BOFCUS3NXXX
+2025-04-29 18:44:16,439 - Settlement status: Settlement Success
+2025-04-29 18:44:16,439 - Sending settlement completion notifications to CHASUS33XXX and BOFCUS3NXXX
+2025-04-29 18:44:16,439 - Generating PACS.002 acknowledgment for message 2025-04-29-224416
+2025-04-29 18:44:16,440 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_CHASUS33XXX_20250429184416.xml
+2025-04-29 18:44:16,440 - Generating PACS.002 acknowledgment for message 2025-04-29-224416
+2025-04-29 18:44:16,441 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_BOFCUS3NXXX_20250429184416.xml
+2025-04-29 18:44:16,441 - Settlement notifications sent to both parties
+2025-04-29 18:44:16,441 - Generating CAMT.054 credit notification for BOFCUS3NXXX
+2025-04-29 18:44:16,442 - CAMT.054 notification saved to messages/camt054/camt054_BOFCUS3NXXX_20250429184416.xml
+2025-04-29 18:44:16,442 - Sent CAMT.054 credit notification to BOFCUS3NXXX
