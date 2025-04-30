@@ -123,9 +123,13 @@ class PaymentApp(ctk.CTk):
         self.payment_frame = ctk.CTkFrame(self)
         self.payment_frame.pack(expand=True, fill="both", pady=40, padx=40)
 
+        # Create scrollable main container
+        main_container = ctk.CTkScrollableFrame(self.payment_frame)
+        main_container.pack(expand=True, fill="both", padx=20, pady=20)
+
         # Header section
-        header_frame = ctk.CTkFrame(self.payment_frame)
-        header_frame.pack(fill="x", padx=20, pady=(20, 30))
+        header_frame = ctk.CTkFrame(main_container)
+        header_frame.pack(fill="x", pady=(0, 20))
 
         title = ctk.CTkLabel(
             header_frame,
@@ -143,8 +147,8 @@ class PaymentApp(ctk.CTk):
         balance_label.pack(pady=10)
 
         # Payment form section
-        form_frame = ctk.CTkFrame(self.payment_frame)
-        form_frame.pack(fill="x", padx=100, pady=20)
+        form_frame = ctk.CTkFrame(main_container)
+        form_frame.pack(fill="x", pady=10)
 
         recipient_label = ctk.CTkLabel(
             form_frame,
@@ -188,6 +192,51 @@ class PaymentApp(ctk.CTk):
         )
         send_button.pack(pady=(0, 30))
 
+        # Process Tracker Frame
+        tracker_label = ctk.CTkLabel(
+            main_container,
+            text="Payment Process Tracker",
+            font=self.heading_font
+        )
+        tracker_label.pack(pady=(20, 10))
+
+        self.tracker_frame = ctk.CTkFrame(main_container)
+        self.tracker_frame.pack(fill="x", pady=(0, 20))
+
+        # Process steps and their checkboxes
+        self.process_steps = [
+            "Creating PAIN.001 message",
+            "PACS.008 sent to Exchange",
+            "Exchange validating message",
+            "PACS.002 received from Exchange",
+            "PACS.008 sent to Creditor Agent",
+            "PACS.002 from Creditor Agent",
+            "Settlement in progress",
+            "PACS.002 sent to Debtor/Creditor",
+            "CAMT.054 sent to Creditor"
+        ]
+        
+        self.checkboxes = []
+        for step in self.process_steps:
+            step_frame = ctk.CTkFrame(self.tracker_frame, fg_color="transparent")
+            step_frame.pack(fill="x", pady=5)
+            
+            checkbox = ctk.CTkCheckBox(
+                step_frame, 
+                text=step,
+                state="disabled",
+                font=("Helvetica", 12)
+            )
+            checkbox.pack(side="left", padx=20)
+            self.checkboxes.append(checkbox)
+
+        # Adjust window size to accommodate all elements
+        self.geometry("800x800")
+
+    def update_process_status(self, step_index):
+        self.checkboxes[step_index].select()
+        self.update()
+
     def send_payment(self):
         payer_name = self.logged_in_user.get()
         payee_name = self.recipient.get()
@@ -218,14 +267,18 @@ class PaymentApp(ctk.CTk):
             conn = sqlite3.connect('payment_system.db')
             cursor = conn.cursor()
 
+            # Reset checkboxes
+            for checkbox in self.checkboxes:
+                checkbox.deselect()
+
             # Generate PAIN.001 message
-            logging.info(f"Generating PAIN.001 message for customer payment initiation")
+            self.update_process_status(0)  # Step 1
             pain001_tree = generate_pain001_message(payer, payee, amount)
             pain001_filename = save_pain001_message(pain001_tree, payer_name)
             logging.info(f"PAIN.001 message saved to {pain001_filename}")
             
             # Process through FI Simulator
-            logging.info(f"Sending PAIN.001 message to FI Simulator")
+            self.update_process_status(1)  # Step 2
             fi_simulator = FISimulator()
             success, result = fi_simulator.process_pain001(pain001_filename)
             
@@ -235,11 +288,20 @@ class PaymentApp(ctk.CTk):
                 return
                 
             pacs008_filename = result
+            self.update_process_status(2)  # Step 3
 
             # Process through RTR Exchange
+            self.update_process_status(3)  # Step 4
             rtr_result = process_through_rtr(pacs008_filename)
             
             if "Success" in rtr_result:
+                # Simulate remaining steps
+                self.update_process_status(4)  # Step 5
+                self.update_process_status(5)  # Step 6
+                self.update_process_status(6)  # Step 7
+                self.update_process_status(7)  # Step 8
+                self.update_process_status(8)  # Step 9
+
                 # Log the transaction
                 cursor.execute("""
                     INSERT INTO transactions (sender_id, receiver_id, amount)

@@ -2,32 +2,32 @@
 <Document>
   <CstmrCdtTrfInitn>
     <GrpHdr>
-      <MsgId>PAIN001-2025-04-29-224416</MsgId>
-      <CreDtTm>2025-04-29T22:44:16</CreDtTm>
+      <MsgId>PAIN001-2025-04-30-000407</MsgId>
+      <CreDtTm>2025-04-30T00:04:07</CreDtTm>
       <NbOfTxs>1</NbOfTxs>
     </GrpHdr>
     <PmtInf>
-      <PmtInfId>PMT-2025-04-29-224416</PmtInfId>
+      <PmtInfId>PMT-2025-04-30-000407</PmtInfId>
       <PmtMtd>TRF</PmtMtd>
       <Dbtr>
-        <Nm>Potato Inc.</Nm>
+        <Nm>ABC Corporation</Nm>
       </Dbtr>
       <DbtrAcct>
-        <Id>2</Id>
+        <Id>1</Id>
       </DbtrAcct>
       <DbtrAgt>
-        <FinInstnId>CHASUS33XXX</FinInstnId>
+        <FinInstnId>BOFCUS3NXXX</FinInstnId>
       </DbtrAgt>
       <CdtTrfTxInf>
-        <Amt>1000.00</Amt>
+        <Amt>50.00</Amt>
         <Cdtr>
-          <Nm>ABC Corporation</Nm>
+          <Nm>Potato Inc.</Nm>
         </Cdtr>
         <CdtrAcct>
-          <Id>1</Id>
+          <Id>2</Id>
         </CdtrAcct>
         <CdtrAgt>
-          <FinInstnId>BOFCUS3NXXX</FinInstnId>
+          <FinInstnId>CHASUS33XXX</FinInstnId>
         </CdtrAgt>
       </CdtTrfTxInf>
     </PmtInf>
