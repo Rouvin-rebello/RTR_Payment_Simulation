@@ -4,6 +4,7 @@ import os
 from datetime import datetime
 from xml.dom import minidom
 from ISO20022_Pacs002_Generator import generate_pacs002_message
+from ISO20022_Camt054_Generator import generate_camt054_message
 
 class ReceiverBankSimulator:
     def save_receiver_pacs002(self, tree, debtor_bic):
@@ -43,3 +44,34 @@ class ReceiverBankSimulator:
         except Exception as e:
             logging.error(f"Receiver Bank processing error: {str(e)}")
             return False, str(e)
+
+    def handle_settlement_completion(self, msg_id, creditor, amount):
+        """Handle settlement completion and generate CAMT.054"""
+        logging.info(f"Receiver Bank handling settlement completion for {creditor}")
+        try:
+            # Generate and send CAMT.054 credit notification
+            camt054_tree = generate_camt054_message(creditor, amount, msg_id)
+            camt054_filename = self.save_camt054(camt054_tree, creditor)
+            logging.info(f"Generated and sent CAMT.054 to {creditor}")
+            return True, camt054_filename
+        except Exception as e:
+            logging.error(f"Error generating CAMT.054: {str(e)}")
+            return False, str(e)
+
+    def save_camt054(self, tree, creditor_bic):
+        """Save CAMT.054 message to file"""
+        if not os.path.exists("messages/camt054"):
+            os.makedirs("messages/camt054")
+            
+        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+        filename = f"messages/camt054/camt054_{creditor_bic}_{timestamp}.xml"
+        
+        rough_string = ET.tostring(tree.getroot(), 'utf-8')
+        reparsed = minidom.parseString(rough_string)
+        pretty_xml = reparsed.toprettyxml(indent="  ")
+        
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(pretty_xml)
+            
+        logging.info(f"CAMT.054 saved to {filename}")
+        return filename

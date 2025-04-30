@@ -4,13 +4,13 @@ import os
 from xml.dom import minidom
 import logging
 
+
 logging.basicConfig(level=logging.INFO)
 
 def generate_pain001_message(payer, payee, amount):
     logging.info(f"Creating PAIN.001 message structure for {payer['name']} to {payee['name']}")
     now = datetime.now(timezone.utc)
     timestamp = now.strftime("%Y-%m-%d-%H%M%S")
-    
     document = ET.Element("Document")
     cstmr_cdt_trf_initn = ET.SubElement(document, "CstmrCdtTrfInitn")
     

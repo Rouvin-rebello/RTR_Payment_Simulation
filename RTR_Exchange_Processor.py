@@ -4,7 +4,6 @@ from datetime import datetime
 import logging
 from RTR_Settlement_Processor import RTRSettlementProcessor
 from ISO20022_Pacs002_Generator import generate_pacs002_message, save_pacs002_message
-from ISO20022_Camt054_Generator import generate_camt054_message, save_camt054_message
 from Agent_Creditor_Simulator import ReceiverBankSimulator
 
 # Setup logging for settlement simulation
@@ -116,10 +115,8 @@ class RTRExchangeProcessor:
                     # Send settlement completion notifications
                     self.send_settlement_notifications(msg_id_value, debtor_value, creditor_value)
                     
-                    # Generate and send CAMT.054 credit notification
-                    camt054_tree = generate_camt054_message(creditor_value, amount_value, msg_id_value)
-                    camt054_filename = save_camt054_message(camt054_tree, creditor_value)
-                    logging.info(f"Sent CAMT.054 credit notification to {creditor_value}")
+                    # Notify receiver bank of settlement completion
+                    self.receiver_bank.handle_settlement_completion(msg_id_value, creditor_value, amount_value)
                     
                 return settlement_status
             else:

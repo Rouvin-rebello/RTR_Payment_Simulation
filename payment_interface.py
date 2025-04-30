@@ -25,7 +25,7 @@ class PaymentApp(ctk.CTk):
         super().__init__()
 
         self.title("RTR Payment Simulation")
-        self.geometry("800x600")  # Larger window
+        self.geometry("800x600") 
         self.resizable(False, False)
 
         # Configure fonts and colors
@@ -205,15 +205,22 @@ class PaymentApp(ctk.CTk):
 
         # Process steps and their checkboxes
         self.process_steps = [
-            "Creating PAIN.001 message",
-            "PACS.008 sent to Exchange",
-            "Exchange validating message",
-            "PACS.002 received from Exchange",
-            "PACS.008 sent to Creditor Agent",
+            "Debtor Simulator Created PAIN.001 message",
+            "Debtor Simulator Sent PAIN.001 to Debtor Agent",
+            "Debtor Agent Created PACS.008",
+            "Debtor Agent Sent PACS.008 to Exchange",
+            "Exchange validated PACS.008",
+            "Exchange Created PACS.002",
+            "Exchange Sent PACS.002 to Debtor Agent",
+            "Exchange component created PACS.008",
+            "Exchange sent PACS.008 to Creditor Agent",
             "PACS.002 from Creditor Agent",
+            "Creditor Agent created PACS.002",
+            "Creditor Agent sent PACS.002 to Exchange",
             "Settlement in progress",
-            "PACS.002 sent to Debtor/Creditor",
-            "CAMT.054 sent to Creditor"
+            "Exchange sent PACS.002 to Debtor/Creditor Agent",
+            "Creditor Agent created CAMT.054",
+            "Creditor Agent sent CAMT.054 to Creditor Simulator"
         ]
         
         self.checkboxes = []
@@ -272,15 +279,15 @@ class PaymentApp(ctk.CTk):
                 checkbox.deselect()
 
             # Generate PAIN.001 message
-            self.update_process_status(0)  # Step 1
+            self.update_process_status(0)  # Debtor Simulator Created PAIN.001
             pain001_tree = generate_pain001_message(payer, payee, amount)
             pain001_filename = save_pain001_message(pain001_tree, payer_name)
-            logging.info(f"PAIN.001 message saved to {pain001_filename}")
+            self.update_process_status(1)  # Debtor Simulator Sent PAIN.001
             
             # Process through FI Simulator
-            self.update_process_status(1)  # Step 2
             fi_simulator = FISimulator()
             success, result = fi_simulator.process_pain001(pain001_filename)
+            self.update_process_status(2)  # Debtor Agent Created PACS.008
             
             if not success:
                 logging.error(f"FI Processing Error: {result}")
@@ -288,19 +295,25 @@ class PaymentApp(ctk.CTk):
                 return
                 
             pacs008_filename = result
-            self.update_process_status(2)  # Step 3
+            self.update_process_status(3)  # Debtor Agent Sent PACS.008
 
             # Process through RTR Exchange
-            self.update_process_status(3)  # Step 4
+            self.update_process_status(4)  # Exchange validated PACS.008
+            self.update_process_status(5)  # Exchange Created PACS.002
+            self.update_process_status(6)  # Exchange Sent PACS.002 to Debtor Agent
+            self.update_process_status(7)  # Exchange component created PACS.008
+            self.update_process_status(8)  # Exchange sent PACS.008 to Creditor Agent
             rtr_result = process_through_rtr(pacs008_filename)
             
             if "Success" in rtr_result:
                 # Simulate remaining steps
-                self.update_process_status(4)  # Step 5
-                self.update_process_status(5)  # Step 6
-                self.update_process_status(6)  # Step 7
-                self.update_process_status(7)  # Step 8
-                self.update_process_status(8)  # Step 9
+                self.update_process_status(9)   # PACS.002 from Creditor Agent
+                self.update_process_status(10)  # Creditor Agent created PACS.002
+                self.update_process_status(11)  # Creditor Agent sent PACS.002 to Exchange
+                self.update_process_status(12)  # Settlement in progress
+                self.update_process_status(13)  # Exchange sent PACS.002 to Debtor/Creditor
+                self.update_process_status(14)  # Creditor Agent created CAMT.054
+                self.update_process_status(15)  # Creditor Agent sent CAMT.054
 
                 # Log the transaction
                 cursor.execute("""
