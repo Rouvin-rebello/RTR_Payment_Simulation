@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<Document>
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>CAMT054-2025-05-02-011402</MsgId>
+      <CreDtTm>2025-05-02T01:14:02</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>CRED-2025-05-02-011402</Id>
+      <CreDtTm>2025-05-02T01:14:02</CreDtTm>
+      <Acct>BOFCUS3NXXX</Acct>
+      <TxsSummry>Credit: 20.00</TxsSummry>
+      <RltdRef>2025-05-02-011402</RltdRef>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>

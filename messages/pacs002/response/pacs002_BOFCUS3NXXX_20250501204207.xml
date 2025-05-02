@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<Document>
+  <FIToFIPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PACS002-2025-05-02-004207</MsgId>
+      <CreDtTm>2025-05-02T00:42:07</CreDtTm>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>2025-05-02-004207</OrgnlMsgId>
+      <OrgnlMsgNmId>pacs.008.001.01</OrgnlMsgNmId>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+  </FIToFIPmtStsRpt>
+</Document>
