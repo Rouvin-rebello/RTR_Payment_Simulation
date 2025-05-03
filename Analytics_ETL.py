@@ -2,7 +2,18 @@ import re
 import json
 from datetime import datetime
 import os
+import pandas as pd
+import logging
 
+# File paths
+INPUT_FILE = 'output/parsed_transactions.json'
+OUTPUT_FILE = 'output/transaction data.csv'
+
+FAKE_BIC_MAP = {
+    'ABC Corporation': 'BOFCUS3NXXX',
+    'Potato Inc.': 'CHASUS33XXX',
+    'Wallet LLC': 'TDOMCATTTOR'
+}
 
 def parse_log_file(log_file_path):
     parsed_data = []
@@ -47,7 +58,33 @@ def parse_log_file(log_file_path):
     return parsed_data
 
 
-if __name__ == "__main__":
+def enrich_transaction(tx):
+    tx['sender_bic'] = FAKE_BIC_MAP.get(tx['sender'], 'UNKNOWN')
+    tx['receiver_bic'] = FAKE_BIC_MAP.get(tx['receiver'], 'UNKNOWN')
+    try:
+        tx['timestamp'] = pd.to_datetime(tx['timestamp'])
+    except Exception as e:
+        tx['timestamp'] = pd.NaT
+    tx['status_clean'] = 'Success' if 'Success' in tx['status'] else 'Failure'
+    return tx
+
+def etl_pipeline():
+    # Extract
+    with open(INPUT_FILE, 'r') as f:
+        transactions = json.load(f)
+
+    # Transform
+    enriched_transactions = [enrich_transaction(tx) for tx in transactions]
+    df = pd.DataFrame(enriched_transactions)
+
+    # Optional: sort by time
+    df = df.sort_values(by='timestamp')
+
+    # Load
+    df.to_csv(OUTPUT_FILE, index=False)
+    print(f"ETL complete. CSV written to: {OUTPUT_FILE}")
+
+def run_etl():
     os.makedirs("output", exist_ok=True)
     logs_path = "settlement_log.txt"
     parsed_output = parse_log_file(logs_path)
@@ -56,3 +93,28 @@ if __name__ == "__main__":
         json.dump(parsed_output, out_file, indent=4, default=str)
 
     print(f"Parsed {len(parsed_output)} transactions.")
+
+    etl_pipeline()
+    print("ETL pipeline executed successfully.")
+    
+    if run_etl():
+        print("Analytics ETL process executed successfully.")
+    else:
+        print("Analytics ETL process failed.")
+
+def run_etl():
+    os.makedirs("output", exist_ok=True)
+    logs_path = "settlement_log.txt"
+    parsed_output = parse_log_file(logs_path)
+
+    with open("output/parsed_transactions.json", "w") as out_file:
+        json.dump(parsed_output, out_file, indent=4, default=str)
+
+    print(f"Parsed {len(parsed_output)} transactions.")
+
+    etl_pipeline()
+    print("ETL pipeline executed successfully.")
+
+
+if __name__ == "__main__":
+    run_etl()

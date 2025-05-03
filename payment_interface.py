@@ -12,6 +12,7 @@ from ISO20022_Pacs008_Generator import (
 from ISO20022_Pain001_Generator import generate_pain001_message, save_pain001_message
 from db_manager import reset_db
 from Agent_Debtor_Simulator import FISimulator
+from Analytics_ETL import run_etl
 
 # Configure logging
 logging.basicConfig(filename='settlement_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
@@ -325,6 +326,9 @@ class PaymentApp(ctk.CTk):
                 
                 conn.commit()
                 conn.close()
+                
+                # Run ETL process
+                run_etl()
                 
                 # Refresh the payment screen
                 self.payment_frame.destroy()
