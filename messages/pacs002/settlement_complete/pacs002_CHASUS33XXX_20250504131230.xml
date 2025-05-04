@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<Document>
+  <FIToFIPmtStsRpt>
+    <GrpHdr>
+      <MsgId>PACS002-2025-05-04-171230</MsgId>
+      <CreDtTm>2025-05-04T17:12:30</CreDtTm>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>2025-05-04-171230</OrgnlMsgId>
+      <OrgnlMsgNmId>pacs.008.001.01</OrgnlMsgNmId>
+      <GrpSts>ACSC</GrpSts>
+      <StsRsn>
+        <Rsn>Settlement completed successfully</Rsn>
+      </StsRsn>
+    </OrgnlGrpInfAndSts>
+  </FIToFIPmtStsRpt>
+</Document>
