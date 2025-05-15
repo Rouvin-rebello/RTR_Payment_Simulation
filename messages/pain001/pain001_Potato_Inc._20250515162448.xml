@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<Document>
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAIN001-2025-05-15-162448</MsgId>
+      <CreDtTm>2025-05-15T16:24:48</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMT-2025-05-15-162448</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <Dbtr>
+        <Nm>Potato Inc.</Nm>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>2</Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>CHASUS33XXX</FinInstnId>
+      </DbtrAgt>
+      <CdtTrfTxInf>
+        <Amt>300.00</Amt>
+        <Cdtr>
+          <Nm>Wallet LLC</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>3</Id>
+        </CdtrAcct>
+        <CdtrAgt>
+          <FinInstnId>CITIUS33XXX</FinInstnId>
+        </CdtrAgt>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
