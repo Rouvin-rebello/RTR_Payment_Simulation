@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Document>
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>FWD-20250514201851</MsgId>
+      <CreDtTm>2025-05-15T00:18:51</CreDtTm>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <EndToEndId>2025-05-15-001851</EndToEndId>
+      </PmtId>
+      <Amt>433.00</Amt>
+      <Debtor>BOFCUS3NXXX</Debtor>
+      <Creditor>CITIUS33XXX</Creditor>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
