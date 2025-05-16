@@ -238,5 +238,21 @@
         "receiver": "Wallet LLC",
         "amount": 65.0,
         "status": "Settlement Success"
+    },
+    {
+        "timestamp": "2025-05-16 18:30:45.343000",
+        "transaction_id": "FWD-20250516183045",
+        "sender": "Wallet LLC",
+        "receiver": "Potato Inc.",
+        "amount": 165.0,
+        "status": "Settlement Success"
+    },
+    {
+        "timestamp": "2025-05-16 18:31:08.239000",
+        "transaction_id": "FWD-20250516183108",
+        "sender": "ABC Corporation",
+        "receiver": "Potato Inc.",
+        "amount": 15.0,
+        "status": "Settlement Success"
     }
 ]
