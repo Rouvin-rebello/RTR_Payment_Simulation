@@ -1333,3 +1333,213 @@
 2025-05-16 18:31:08,242 - Generating CAMT.054 credit notification for CHASUS33XXX
 2025-05-16 18:31:08,243 - CAMT.054 saved to messages/camt054/camt054_CHASUS33XXX_20250516183108.xml
 2025-05-16 18:31:08,243 - Generated and sent CAMT.054 to CHASUS33XXX
+2025-05-17 15:18:31,400 - Initiating payment from Wallet LLC to Potato Inc. for amount 200.0
+2025-05-17 15:18:31,458 - Creating PAIN.001 message structure for Wallet LLC to Potato Inc.
+2025-05-17 15:18:31,459 - PAIN.001 message structure created with ID: PAIN001-2025-05-17-191831
+2025-05-17 15:18:31,459 - Saving PAIN.001 message for Wallet LLC
+2025-05-17 15:18:31,474 - PAIN.001 message successfully saved to messages/pain001/pain001_Wallet_LLC_20250517191831.xml
+2025-05-17 15:18:31,480 - Generating PACS.008 message for payment from Wallet LLC to Potato Inc. for amount 200.0
+2025-05-17 15:18:31,480 - Saving PACS.008 message for payment from Wallet LLC to Potato Inc.
+2025-05-17 15:18:31,481 - PACS.008 message saved to messages/pacs008/Wallet_LLC_to_Potato_Inc._20250517191831.xml
+2025-05-17 15:18:31,510 - Processing payment message from file: messages/pacs008/Wallet_LLC_to_Potato_Inc._20250517191831.xml
+2025-05-17 15:18:31,510 - Message validation successful for payment of 200.0 from CITIUS33XXX to CHASUS33XXX
+2025-05-17 15:18:31,511 - Generating PACS.002 acknowledgment for message 2025-05-17-191831
+2025-05-17 15:18:31,512 - PACS.002 response message saved to messages/pacs002/response/pacs002_CITIUS33XXX_20250517151831.xml
+2025-05-17 15:18:31,512 - Generated PACS.002 acknowledgment for CITIUS33XXX
+2025-05-17 15:18:31,512 - Forwarding PACS.008 message to receiving bank: CHASUS33XXX
+2025-05-17 15:18:31,519 - Forwarded PACS.008 saved to messages/pacs008/forwarded/to_CHASUS33XXX_20250517151831.xml
+2025-05-17 15:18:31,519 - PACS.008 message forwarded to receiving bank CHASUS33XXX
+2025-05-17 15:18:31,519 - Receiver Bank processing incoming PACS.008: messages/pacs008/forwarded/to_CHASUS33XXX_20250517151831.xml
+2025-05-17 15:18:31,519 - Generating PACS.002 acknowledgment for message FWD-20250517151831
+2025-05-17 15:18:31,520 - Receiver PACS.002 response saved to messages/pacs002/receiver_response/response_to_CITIUS33XXX_20250517151831.xml
+2025-05-17 15:18:31,520 - Receiver Bank sent PACS.002 acceptance for message FWD-20250517151831
+2025-05-17 15:18:31,520 - Received acceptance PACS.002 from receiver bank
+2025-05-17 15:18:31,520 - Validating routing for payment of 200.0 from CITIUS33XXX to CHASUS33XXX
+2025-05-17 15:18:31,520 - Attempting to route payment to CHASUS33XXX
+2025-05-17 15:18:31,520 - Routing payment to CHASUS33XXX for 200.0
+2025-05-17 15:18:31,520 - Initiating settlement for payment of 200.0 from CITIUS33XXX to CHASUS33XXX
+2025-05-17 15:18:31,520 - Settling payment from CITIUS33XXX to CHASUS33XXX of amount 200.0
+2025-05-17 15:18:31,520 - Starting settlement process for 200.0 from CITIUS33XXX to CHASUS33XXX
+2025-05-17 15:18:31,520 - Updating balance for user 3 by -200.0
+2025-05-17 15:18:31,522 - Updating balance for user 2 by 200.0
+2025-05-17 15:18:31,522 - Recording payment of 200.0 from user 3 to user 2
+2025-05-17 15:18:31,529 - Successfully settled payment of 200.0 from CITIUS33XXX to CHASUS33XXX
+2025-05-17 15:18:31,529 - Settlement status: Settlement Success
+2025-05-17 15:18:31,529 - Sending settlement completion notifications to CITIUS33XXX and CHASUS33XXX
+2025-05-17 15:18:31,529 - Generating PACS.002 acknowledgment for message 2025-05-17-191831
+2025-05-17 15:18:31,530 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_CITIUS33XXX_20250517151831.xml
+2025-05-17 15:18:31,530 - Generating PACS.002 acknowledgment for message 2025-05-17-191831
+2025-05-17 15:18:31,531 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_CHASUS33XXX_20250517151831.xml
+2025-05-17 15:18:31,531 - Settlement notifications sent to both parties
+2025-05-17 15:18:31,531 - Receiver Bank handling settlement completion for CHASUS33XXX
+2025-05-17 15:18:31,531 - Generating CAMT.054 credit notification for CHASUS33XXX
+2025-05-17 15:18:31,532 - CAMT.054 saved to messages/camt054/camt054_CHASUS33XXX_20250517151831.xml
+2025-05-17 15:18:31,532 - Generated and sent CAMT.054 to CHASUS33XXX
+2025-05-17 15:18:42,793 - Initiating payment from Wallet LLC to ABC Corporation for amount 799.0
+2025-05-17 15:18:42,844 - Creating PAIN.001 message structure for Wallet LLC to ABC Corporation
+2025-05-17 15:18:42,844 - PAIN.001 message structure created with ID: PAIN001-2025-05-17-191842
+2025-05-17 15:18:42,844 - Saving PAIN.001 message for Wallet LLC
+2025-05-17 15:18:42,845 - PAIN.001 message successfully saved to messages/pain001/pain001_Wallet_LLC_20250517191842.xml
+2025-05-17 15:18:42,849 - Generating PACS.008 message for payment from Wallet LLC to ABC Corporation for amount 799.0
+2025-05-17 15:18:42,849 - Saving PACS.008 message for payment from Wallet LLC to ABC Corporation
+2025-05-17 15:18:42,850 - PACS.008 message saved to messages/pacs008/Wallet_LLC_to_ABC_Corporation_20250517191842.xml
+2025-05-17 15:18:42,873 - Processing payment message from file: messages/pacs008/Wallet_LLC_to_ABC_Corporation_20250517191842.xml
+2025-05-17 15:18:42,873 - Message validation successful for payment of 799.0 from CITIUS33XXX to BOFCUS3NXXX
+2025-05-17 15:18:42,873 - Generating PACS.002 acknowledgment for message 2025-05-17-191842
+2025-05-17 15:18:42,874 - PACS.002 response message saved to messages/pacs002/response/pacs002_CITIUS33XXX_20250517151842.xml
+2025-05-17 15:18:42,874 - Generated PACS.002 acknowledgment for CITIUS33XXX
+2025-05-17 15:18:42,874 - Forwarding PACS.008 message to receiving bank: BOFCUS3NXXX
+2025-05-17 15:18:42,875 - Forwarded PACS.008 saved to messages/pacs008/forwarded/to_BOFCUS3NXXX_20250517151842.xml
+2025-05-17 15:18:42,875 - PACS.008 message forwarded to receiving bank BOFCUS3NXXX
+2025-05-17 15:18:42,875 - Receiver Bank processing incoming PACS.008: messages/pacs008/forwarded/to_BOFCUS3NXXX_20250517151842.xml
+2025-05-17 15:18:42,875 - Generating PACS.002 acknowledgment for message FWD-20250517151842
+2025-05-17 15:18:42,881 - Receiver PACS.002 response saved to messages/pacs002/receiver_response/response_to_CITIUS33XXX_20250517151842.xml
+2025-05-17 15:18:42,881 - Receiver Bank sent PACS.002 acceptance for message FWD-20250517151842
+2025-05-17 15:18:42,881 - Received acceptance PACS.002 from receiver bank
+2025-05-17 15:18:42,881 - Validating routing for payment of 799.0 from CITIUS33XXX to BOFCUS3NXXX
+2025-05-17 15:18:42,881 - Attempting to route payment to BOFCUS3NXXX
+2025-05-17 15:18:42,881 - Routing payment to BOFCUS3NXXX for 799.0
+2025-05-17 15:18:42,881 - Initiating settlement for payment of 799.0 from CITIUS33XXX to BOFCUS3NXXX
+2025-05-17 15:18:42,881 - Settling payment from CITIUS33XXX to BOFCUS3NXXX of amount 799.0
+2025-05-17 15:18:42,881 - Starting settlement process for 799.0 from CITIUS33XXX to BOFCUS3NXXX
+2025-05-17 15:18:42,882 - Updating balance for user 3 by -799.0
+2025-05-17 15:18:42,883 - Updating balance for user 1 by 799.0
+2025-05-17 15:18:42,883 - Recording payment of 799.0 from user 3 to user 1
+2025-05-17 15:18:42,890 - Successfully settled payment of 799.0 from CITIUS33XXX to BOFCUS3NXXX
+2025-05-17 15:18:42,890 - Settlement status: Settlement Success
+2025-05-17 15:18:42,891 - Sending settlement completion notifications to CITIUS33XXX and BOFCUS3NXXX
+2025-05-17 15:18:42,891 - Generating PACS.002 acknowledgment for message 2025-05-17-191842
+2025-05-17 15:18:42,891 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_CITIUS33XXX_20250517151842.xml
+2025-05-17 15:18:42,891 - Generating PACS.002 acknowledgment for message 2025-05-17-191842
+2025-05-17 15:18:42,892 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_BOFCUS3NXXX_20250517151842.xml
+2025-05-17 15:18:42,892 - Settlement notifications sent to both parties
+2025-05-17 15:18:42,892 - Receiver Bank handling settlement completion for BOFCUS3NXXX
+2025-05-17 15:18:42,892 - Generating CAMT.054 credit notification for BOFCUS3NXXX
+2025-05-17 15:18:42,893 - CAMT.054 saved to messages/camt054/camt054_BOFCUS3NXXX_20250517151842.xml
+2025-05-17 15:18:42,893 - Generated and sent CAMT.054 to BOFCUS3NXXX
+2025-05-17 15:19:22,716 - Initiating payment from Potato Inc. to ABC Corporation for amount 988.0
+2025-05-17 15:19:22,787 - Creating PAIN.001 message structure for Potato Inc. to ABC Corporation
+2025-05-17 15:19:22,787 - PAIN.001 message structure created with ID: PAIN001-2025-05-17-191922
+2025-05-17 15:19:22,787 - Saving PAIN.001 message for Potato Inc.
+2025-05-17 15:19:22,798 - PAIN.001 message successfully saved to messages/pain001/pain001_Potato_Inc._20250517191922.xml
+2025-05-17 15:19:22,802 - Generating PACS.008 message for payment from Potato Inc. to ABC Corporation for amount 988.0
+2025-05-17 15:19:22,803 - Saving PACS.008 message for payment from Potato Inc. to ABC Corporation
+2025-05-17 15:19:22,804 - PACS.008 message saved to messages/pacs008/Potato_Inc._to_ABC_Corporation_20250517191922.xml
+2025-05-17 15:19:22,828 - Processing payment message from file: messages/pacs008/Potato_Inc._to_ABC_Corporation_20250517191922.xml
+2025-05-17 15:19:22,828 - Message validation successful for payment of 988.0 from CHASUS33XXX to BOFCUS3NXXX
+2025-05-17 15:19:22,829 - Generating PACS.002 acknowledgment for message 2025-05-17-191922
+2025-05-17 15:19:22,829 - PACS.002 response message saved to messages/pacs002/response/pacs002_CHASUS33XXX_20250517151922.xml
+2025-05-17 15:19:22,829 - Generated PACS.002 acknowledgment for CHASUS33XXX
+2025-05-17 15:19:22,830 - Forwarding PACS.008 message to receiving bank: BOFCUS3NXXX
+2025-05-17 15:19:22,831 - Forwarded PACS.008 saved to messages/pacs008/forwarded/to_BOFCUS3NXXX_20250517151922.xml
+2025-05-17 15:19:22,831 - PACS.008 message forwarded to receiving bank BOFCUS3NXXX
+2025-05-17 15:19:22,831 - Receiver Bank processing incoming PACS.008: messages/pacs008/forwarded/to_BOFCUS3NXXX_20250517151922.xml
+2025-05-17 15:19:22,832 - Generating PACS.002 acknowledgment for message FWD-20250517151922
+2025-05-17 15:19:22,832 - Receiver PACS.002 response saved to messages/pacs002/receiver_response/response_to_CHASUS33XXX_20250517151922.xml
+2025-05-17 15:19:22,832 - Receiver Bank sent PACS.002 acceptance for message FWD-20250517151922
+2025-05-17 15:19:22,833 - Received acceptance PACS.002 from receiver bank
+2025-05-17 15:19:22,833 - Validating routing for payment of 988.0 from CHASUS33XXX to BOFCUS3NXXX
+2025-05-17 15:19:22,833 - Attempting to route payment to BOFCUS3NXXX
+2025-05-17 15:19:22,833 - Routing payment to BOFCUS3NXXX for 988.0
+2025-05-17 15:19:22,833 - Initiating settlement for payment of 988.0 from CHASUS33XXX to BOFCUS3NXXX
+2025-05-17 15:19:22,833 - Settling payment from CHASUS33XXX to BOFCUS3NXXX of amount 988.0
+2025-05-17 15:19:22,833 - Starting settlement process for 988.0 from CHASUS33XXX to BOFCUS3NXXX
+2025-05-17 15:19:22,833 - Updating balance for user 2 by -988.0
+2025-05-17 15:19:22,834 - Updating balance for user 1 by 988.0
+2025-05-17 15:19:22,834 - Recording payment of 988.0 from user 2 to user 1
+2025-05-17 15:19:22,843 - Successfully settled payment of 988.0 from CHASUS33XXX to BOFCUS3NXXX
+2025-05-17 15:19:22,843 - Settlement status: Settlement Success
+2025-05-17 15:19:22,843 - Sending settlement completion notifications to CHASUS33XXX and BOFCUS3NXXX
+2025-05-17 15:19:22,843 - Generating PACS.002 acknowledgment for message 2025-05-17-191922
+2025-05-17 15:19:22,844 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_CHASUS33XXX_20250517151922.xml
+2025-05-17 15:19:22,844 - Generating PACS.002 acknowledgment for message 2025-05-17-191922
+2025-05-17 15:19:22,845 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_BOFCUS3NXXX_20250517151922.xml
+2025-05-17 15:19:22,845 - Settlement notifications sent to both parties
+2025-05-17 15:19:22,845 - Receiver Bank handling settlement completion for BOFCUS3NXXX
+2025-05-17 15:19:22,845 - Generating CAMT.054 credit notification for BOFCUS3NXXX
+2025-05-17 15:19:22,846 - CAMT.054 saved to messages/camt054/camt054_BOFCUS3NXXX_20250517151922.xml
+2025-05-17 15:19:22,846 - Generated and sent CAMT.054 to BOFCUS3NXXX
+2025-05-17 15:19:46,349 - Initiating payment from ABC Corporation to Wallet LLC for amount 548.0
+2025-05-17 15:19:46,399 - Creating PAIN.001 message structure for ABC Corporation to Wallet LLC
+2025-05-17 15:19:46,399 - PAIN.001 message structure created with ID: PAIN001-2025-05-17-191946
+2025-05-17 15:19:46,399 - Saving PAIN.001 message for ABC Corporation
+2025-05-17 15:19:46,407 - PAIN.001 message successfully saved to messages/pain001/pain001_ABC_Corporation_20250517191946.xml
+2025-05-17 15:19:46,411 - Generating PACS.008 message for payment from ABC Corporation to Wallet LLC for amount 548.0
+2025-05-17 15:19:46,411 - Saving PACS.008 message for payment from ABC Corporation to Wallet LLC
+2025-05-17 15:19:46,412 - PACS.008 message saved to messages/pacs008/ABC_Corporation_to_Wallet_LLC_20250517191946.xml
+2025-05-17 15:19:46,436 - Processing payment message from file: messages/pacs008/ABC_Corporation_to_Wallet_LLC_20250517191946.xml
+2025-05-17 15:19:46,437 - Message validation successful for payment of 548.0 from BOFCUS3NXXX to CITIUS33XXX
+2025-05-17 15:19:46,437 - Generating PACS.002 acknowledgment for message 2025-05-17-191946
+2025-05-17 15:19:46,438 - PACS.002 response message saved to messages/pacs002/response/pacs002_BOFCUS3NXXX_20250517151946.xml
+2025-05-17 15:19:46,438 - Generated PACS.002 acknowledgment for BOFCUS3NXXX
+2025-05-17 15:19:46,438 - Forwarding PACS.008 message to receiving bank: CITIUS33XXX
+2025-05-17 15:19:46,439 - Forwarded PACS.008 saved to messages/pacs008/forwarded/to_CITIUS33XXX_20250517151946.xml
+2025-05-17 15:19:46,439 - PACS.008 message forwarded to receiving bank CITIUS33XXX
+2025-05-17 15:19:46,439 - Receiver Bank processing incoming PACS.008: messages/pacs008/forwarded/to_CITIUS33XXX_20250517151946.xml
+2025-05-17 15:19:46,439 - Generating PACS.002 acknowledgment for message FWD-20250517151946
+2025-05-17 15:19:46,440 - Receiver PACS.002 response saved to messages/pacs002/receiver_response/response_to_BOFCUS3NXXX_20250517151946.xml
+2025-05-17 15:19:46,440 - Receiver Bank sent PACS.002 acceptance for message FWD-20250517151946
+2025-05-17 15:19:46,440 - Received acceptance PACS.002 from receiver bank
+2025-05-17 15:19:46,440 - Validating routing for payment of 548.0 from BOFCUS3NXXX to CITIUS33XXX
+2025-05-17 15:19:46,440 - Attempting to route payment to CITIUS33XXX
+2025-05-17 15:19:46,440 - Routing payment to CITIUS33XXX for 548.0
+2025-05-17 15:19:46,440 - Initiating settlement for payment of 548.0 from BOFCUS3NXXX to CITIUS33XXX
+2025-05-17 15:19:46,441 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 548.0
+2025-05-17 15:19:46,441 - Starting settlement process for 548.0 from BOFCUS3NXXX to CITIUS33XXX
+2025-05-17 15:19:46,441 - Updating balance for user 1 by -548.0
+2025-05-17 15:19:46,446 - Updating balance for user 3 by 548.0
+2025-05-17 15:19:46,446 - Recording payment of 548.0 from user 1 to user 3
+2025-05-17 15:19:46,453 - Successfully settled payment of 548.0 from BOFCUS3NXXX to CITIUS33XXX
+2025-05-17 15:19:46,453 - Settlement status: Settlement Success
+2025-05-17 15:19:46,453 - Sending settlement completion notifications to BOFCUS3NXXX and CITIUS33XXX
+2025-05-17 15:19:46,453 - Generating PACS.002 acknowledgment for message 2025-05-17-191946
+2025-05-17 15:19:46,454 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_BOFCUS3NXXX_20250517151946.xml
+2025-05-17 15:19:46,454 - Generating PACS.002 acknowledgment for message 2025-05-17-191946
+2025-05-17 15:19:46,454 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_CITIUS33XXX_20250517151946.xml
+2025-05-17 15:19:46,454 - Settlement notifications sent to both parties
+2025-05-17 15:19:46,454 - Receiver Bank handling settlement completion for CITIUS33XXX
+2025-05-17 15:19:46,454 - Generating CAMT.054 credit notification for CITIUS33XXX
+2025-05-17 15:19:46,455 - CAMT.054 saved to messages/camt054/camt054_CITIUS33XXX_20250517151946.xml
+2025-05-17 15:19:46,455 - Generated and sent CAMT.054 to CITIUS33XXX
+2025-05-17 15:19:59,528 - Initiating payment from ABC Corporation to Potato Inc. for amount 700.0
+2025-05-17 15:19:59,611 - Creating PAIN.001 message structure for ABC Corporation to Potato Inc.
+2025-05-17 15:19:59,611 - PAIN.001 message structure created with ID: PAIN001-2025-05-17-191959
+2025-05-17 15:19:59,611 - Saving PAIN.001 message for ABC Corporation
+2025-05-17 15:19:59,612 - PAIN.001 message successfully saved to messages/pain001/pain001_ABC_Corporation_20250517191959.xml
+2025-05-17 15:19:59,616 - Generating PACS.008 message for payment from ABC Corporation to Potato Inc. for amount 700.0
+2025-05-17 15:19:59,616 - Saving PACS.008 message for payment from ABC Corporation to Potato Inc.
+2025-05-17 15:19:59,617 - PACS.008 message saved to messages/pacs008/ABC_Corporation_to_Potato_Inc._20250517191959.xml
+2025-05-17 15:19:59,642 - Processing payment message from file: messages/pacs008/ABC_Corporation_to_Potato_Inc._20250517191959.xml
+2025-05-17 15:19:59,643 - Message validation successful for payment of 700.0 from BOFCUS3NXXX to CHASUS33XXX
+2025-05-17 15:19:59,643 - Generating PACS.002 acknowledgment for message 2025-05-17-191959
+2025-05-17 15:19:59,644 - PACS.002 response message saved to messages/pacs002/response/pacs002_BOFCUS3NXXX_20250517151959.xml
+2025-05-17 15:19:59,644 - Generated PACS.002 acknowledgment for BOFCUS3NXXX
+2025-05-17 15:19:59,644 - Forwarding PACS.008 message to receiving bank: CHASUS33XXX
+2025-05-17 15:19:59,645 - Forwarded PACS.008 saved to messages/pacs008/forwarded/to_CHASUS33XXX_20250517151959.xml
+2025-05-17 15:19:59,645 - PACS.008 message forwarded to receiving bank CHASUS33XXX
+2025-05-17 15:19:59,645 - Receiver Bank processing incoming PACS.008: messages/pacs008/forwarded/to_CHASUS33XXX_20250517151959.xml
+2025-05-17 15:19:59,645 - Generating PACS.002 acknowledgment for message FWD-20250517151959
+2025-05-17 15:19:59,646 - Receiver PACS.002 response saved to messages/pacs002/receiver_response/response_to_BOFCUS3NXXX_20250517151959.xml
+2025-05-17 15:19:59,646 - Receiver Bank sent PACS.002 acceptance for message FWD-20250517151959
+2025-05-17 15:19:59,646 - Received acceptance PACS.002 from receiver bank
+2025-05-17 15:19:59,646 - Validating routing for payment of 700.0 from BOFCUS3NXXX to CHASUS33XXX
+2025-05-17 15:19:59,647 - Attempting to route payment to CHASUS33XXX
+2025-05-17 15:19:59,647 - Routing payment to CHASUS33XXX for 700.0
+2025-05-17 15:19:59,647 - Initiating settlement for payment of 700.0 from BOFCUS3NXXX to CHASUS33XXX
+2025-05-17 15:19:59,647 - Settling payment from BOFCUS3NXXX to CHASUS33XXX of amount 700.0
+2025-05-17 15:19:59,647 - Starting settlement process for 700.0 from BOFCUS3NXXX to CHASUS33XXX
+2025-05-17 15:19:59,647 - Updating balance for user 1 by -700.0
+2025-05-17 15:19:59,650 - Updating balance for user 2 by 700.0
+2025-05-17 15:19:59,650 - Recording payment of 700.0 from user 1 to user 2
+2025-05-17 15:19:59,656 - Successfully settled payment of 700.0 from BOFCUS3NXXX to CHASUS33XXX
+2025-05-17 15:19:59,656 - Settlement status: Settlement Success
+2025-05-17 15:19:59,656 - Sending settlement completion notifications to BOFCUS3NXXX and CHASUS33XXX
+2025-05-17 15:19:59,656 - Generating PACS.002 acknowledgment for message 2025-05-17-191959
+2025-05-17 15:19:59,657 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_BOFCUS3NXXX_20250517151959.xml
+2025-05-17 15:19:59,657 - Generating PACS.002 acknowledgment for message 2025-05-17-191959
+2025-05-17 15:19:59,658 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_CHASUS33XXX_20250517151959.xml
+2025-05-17 15:19:59,658 - Settlement notifications sent to both parties
+2025-05-17 15:19:59,658 - Receiver Bank handling settlement completion for CHASUS33XXX
+2025-05-17 15:19:59,658 - Generating CAMT.054 credit notification for CHASUS33XXX
+2025-05-17 15:19:59,659 - CAMT.054 saved to messages/camt054/camt054_CHASUS33XXX_20250517151959.xml
+2025-05-17 15:19:59,659 - Generated and sent CAMT.054 to CHASUS33XXX
