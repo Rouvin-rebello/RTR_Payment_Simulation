@@ -36,3 +36,4 @@ timestamp,transaction_id,sender,receiver,amount,status,sender_bic,receiver_bic,s
 2025-05-17 15:19:22.843,FWD-20250517151922,Potato Inc.,ABC Corporation,988.0,Settlement Success,CHASUS33XXX,BOFCUS3NXXX,Success
 2025-05-17 15:19:46.453,FWD-20250517151946,ABC Corporation,Wallet LLC,548.0,Settlement Success,BOFCUS3NXXX,TDOMCATTTOR,Success
 2025-05-17 15:19:59.656,FWD-20250517151959,ABC Corporation,Potato Inc.,700.0,Settlement Success,BOFCUS3NXXX,CHASUS33XXX,Success
+2025-05-22 22:39:39.696,FWD-20250522223939,ABC Corporation,Wallet LLC,500.0,Settlement Success,BOFCUS3NXXX,TDOMCATTTOR,Success

@@ -1543,3 +1543,45 @@
 2025-05-17 15:19:59,658 - Generating CAMT.054 credit notification for CHASUS33XXX
 2025-05-17 15:19:59,659 - CAMT.054 saved to messages/camt054/camt054_CHASUS33XXX_20250517151959.xml
 2025-05-17 15:19:59,659 - Generated and sent CAMT.054 to CHASUS33XXX
+2025-05-22 22:39:39,549 - Initiating payment from ABC Corporation to Wallet LLC for amount 500.0
+2025-05-22 22:39:39,626 - Creating PAIN.001 message structure for ABC Corporation to Wallet LLC
+2025-05-22 22:39:39,626 - PAIN.001 message structure created with ID: PAIN001-2025-05-23-023939
+2025-05-22 22:39:39,626 - Saving PAIN.001 message for ABC Corporation
+2025-05-22 22:39:39,644 - PAIN.001 message successfully saved to messages/pain001/pain001_ABC_Corporation_20250523023939.xml
+2025-05-22 22:39:39,650 - Generating PACS.008 message for payment from ABC Corporation to Wallet LLC for amount 500.0
+2025-05-22 22:39:39,651 - Saving PACS.008 message for payment from ABC Corporation to Wallet LLC
+2025-05-22 22:39:39,652 - PACS.008 message saved to messages/pacs008/ABC_Corporation_to_Wallet_LLC_20250523023939.xml
+2025-05-22 22:39:39,680 - Processing payment message from file: messages/pacs008/ABC_Corporation_to_Wallet_LLC_20250523023939.xml
+2025-05-22 22:39:39,680 - Message validation successful for payment of 500.0 from BOFCUS3NXXX to CITIUS33XXX
+2025-05-22 22:39:39,680 - Generating PACS.002 acknowledgment for message 2025-05-23-023939
+2025-05-22 22:39:39,681 - PACS.002 response message saved to messages/pacs002/response/pacs002_BOFCUS3NXXX_20250522223939.xml
+2025-05-22 22:39:39,681 - Generated PACS.002 acknowledgment for BOFCUS3NXXX
+2025-05-22 22:39:39,681 - Forwarding PACS.008 message to receiving bank: CITIUS33XXX
+2025-05-22 22:39:39,685 - Forwarded PACS.008 saved to messages/pacs008/forwarded/to_CITIUS33XXX_20250522223939.xml
+2025-05-22 22:39:39,685 - PACS.008 message forwarded to receiving bank CITIUS33XXX
+2025-05-22 22:39:39,685 - Receiver Bank processing incoming PACS.008: messages/pacs008/forwarded/to_CITIUS33XXX_20250522223939.xml
+2025-05-22 22:39:39,685 - Generating PACS.002 acknowledgment for message FWD-20250522223939
+2025-05-22 22:39:39,686 - Receiver PACS.002 response saved to messages/pacs002/receiver_response/response_to_BOFCUS3NXXX_20250522223939.xml
+2025-05-22 22:39:39,686 - Receiver Bank sent PACS.002 acceptance for message FWD-20250522223939
+2025-05-22 22:39:39,686 - Received acceptance PACS.002 from receiver bank
+2025-05-22 22:39:39,686 - Validating routing for payment of 500.0 from BOFCUS3NXXX to CITIUS33XXX
+2025-05-22 22:39:39,686 - Attempting to route payment to CITIUS33XXX
+2025-05-22 22:39:39,686 - Routing payment to CITIUS33XXX for 500.0
+2025-05-22 22:39:39,686 - Initiating settlement for payment of 500.0 from BOFCUS3NXXX to CITIUS33XXX
+2025-05-22 22:39:39,686 - Settling payment from BOFCUS3NXXX to CITIUS33XXX of amount 500.0
+2025-05-22 22:39:39,686 - Starting settlement process for 500.0 from BOFCUS3NXXX to CITIUS33XXX
+2025-05-22 22:39:39,687 - Updating balance for user 1 by -500.0
+2025-05-22 22:39:39,689 - Updating balance for user 3 by 500.0
+2025-05-22 22:39:39,690 - Recording payment of 500.0 from user 1 to user 3
+2025-05-22 22:39:39,696 - Successfully settled payment of 500.0 from BOFCUS3NXXX to CITIUS33XXX
+2025-05-22 22:39:39,696 - Settlement status: Settlement Success
+2025-05-22 22:39:39,696 - Sending settlement completion notifications to BOFCUS3NXXX and CITIUS33XXX
+2025-05-22 22:39:39,696 - Generating PACS.002 acknowledgment for message 2025-05-23-023939
+2025-05-22 22:39:39,696 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_BOFCUS3NXXX_20250522223939.xml
+2025-05-22 22:39:39,696 - Generating PACS.002 acknowledgment for message 2025-05-23-023939
+2025-05-22 22:39:39,697 - PACS.002 settlement_complete message saved to messages/pacs002/settlement_complete/pacs002_CITIUS33XXX_20250522223939.xml
+2025-05-22 22:39:39,697 - Settlement notifications sent to both parties
+2025-05-22 22:39:39,697 - Receiver Bank handling settlement completion for CITIUS33XXX
+2025-05-22 22:39:39,697 - Generating CAMT.054 credit notification for CITIUS33XXX
+2025-05-22 22:39:39,698 - CAMT.054 saved to messages/camt054/camt054_CITIUS33XXX_20250522223939.xml
+2025-05-22 22:39:39,698 - Generated and sent CAMT.054 to CITIUS33XXX
